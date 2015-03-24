@@ -9,7 +9,6 @@ var threshold = 19.99;
 function fetchDomContent(url, cb) {
     request(url, function(err, res, body) {
         if (!err && res.statusCode == 200) {
-            console.log(body);
             cb(body);
         } else {
             console.log('Unable to visit the page: ' + url);
